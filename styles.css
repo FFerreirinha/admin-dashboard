@@ -11,7 +11,13 @@
 
 body {
     margin: 0;
+    overflow: auto;
 }
+
+.logo {
+    cursor: pointer;
+}
+
 .container {
     display: grid;
 
@@ -26,7 +32,7 @@ body {
 
 .sidebar {
     display: grid;
-    margin-bottom: 5px;
+    padding-bottom: 10px;
 
     background-color: #9f1239;
 
@@ -62,7 +68,15 @@ body {
 .sidebar>img {
     display: block;
     margin: auto;
-    margin-top: 15px;
+    margin-top: 17px;
+}
+
+#messages-logo {
+    margin-top: 20px;
+}
+
+#history-logo {
+    margin-top: 19px;
 }
 
 #settings-logo {
@@ -123,14 +137,22 @@ body {
 }
 
 .topright-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    padding-right: 120px;
+    gap: 15px;
+
 }
 
 #notification {
     background-image: url("logos/notifications.png");
     background-repeat: no-repeat;
     background-position: right;
+
+    height: 25px;
+    width: 25px;
 }
 
 #user-icon {
@@ -138,6 +160,9 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;  
+
+    width: 64px;
+    height: 64px;
 
     clip-path: circle();
 }
@@ -208,4 +233,92 @@ body {
     grid-column-end: 6;
     grid-row-start: 2;
     grid-row-end: 6;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-gap: 20px;
+
+    padding-left: 10px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+
+.label {
+    position: relative;
+}
+
+.label>p {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    margin: auto;
+
+    color: grey;
+    font-size: 1.2em;
+}
+
+.post {
+    background-color: black;
+    border-radius: 15px;
+}
+
+#post1 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
+
+#post2 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
+
+#post3 {
+    grid-column-start: 1;
+    grid-row-start: 5;
+    grid-row-end: 8;
+}
+
+#post4 {
+    grid-column-start: 2;
+    grid-row-start: 5;
+    grid-row-end: 8;
+}
+
+#post5 {
+    grid-column-start: 1;
+    grid-row-start: 8;
+    grid-row-end: 11;
+}
+
+#post6 {
+    grid-column-start: 2;
+    grid-row-start: 8;
+    grid-row-end: 11;
+}
+
+#label2 {
+    grid-row-start: 1;
+    grid-column-start: 3;
+}
+
+#world-news {
+    grid-column-start: 3;
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
+
+#label3 {
+    grid-column-start: 3;
+    grid-row-start: 5;
+}
+
+#trending {
+    grid-row-start: 6;
+    grid-row-end: 11;
+    grid-column-start: 3;
 }
