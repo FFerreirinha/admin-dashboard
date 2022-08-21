@@ -88,13 +88,121 @@ body {
 }
 
 .header {
-    background-color: blue;
+    display: grid;
+
+    background-color: #ffe4e6;
+    
+    padding-top: 25px;
+
     grid-column-start: 2;
     grid-column-end: 6;
     grid-row-start: 1;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+}
+
+#search-bar {
+    position: relative;
+    bottom: 10%;
+
+    background-image: url("logos/search.png");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    
+    outline: none;
+    border: none;
+    background-color: #f0f9ff;
+    
+    padding-left: 25px;
+    margin-left: 30px;
+    margin-top: 25px;
+    border-radius: 50px;
+    height: 3.5vh;
+    width: 35vw;
+}
+
+.topright-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+#notification {
+    background-image: url("logos/notifications.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+#user-icon {
+    background-image: url("icons/maincat.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;  
+
+    clip-path: circle();
+}
+
+#user-name {
+    text-align: left;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.bottomleft-header {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr;
+
+    padding-top: 2vh;
+    height: 8vh;
+}
+
+#big-user-icon {
+    background-image: url("icons/maincat.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;  
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    clip-path: circle();
+}
+
+#big-user-text1 {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+#big-user-text2 {
+    font-size: 1.45em;
+    font-weight: bold;
+}
+
+.bottomright-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.bottomright-header>button {
+    font-family: Quicksand;
+    font-size: 1.25em;
+    font-weight: bold;
+
+    border-radius: 50px;
+    background-color: #fb7185;
+    color: white;
+
+    outline: none;
+    border: none;
+
+    height: 50px;
+    width: 125px;
 }
 
 .main-content {
+    background-color:#fff1f2;
     grid-column-start: 2;
     grid-column-end: 6;
     grid-row-start: 2;
