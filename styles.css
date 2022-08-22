@@ -419,35 +419,43 @@ body {
 .popular-cat {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 1fr;
 
     overflow: auto;
 
-    color: #ffe4e6;
+    align-content: center;
+    justify-items: start;
 }
 
 .popular-cat>p {
-    grid-row-start: 2;
+    grid-column-start: 2;
+
+    margin: 0px;
+
+    font-size: 1.15em;
 }
 
 .popular-cat>header {
-    font-size: 1.1em;
+    font-size: 1.25em;
     font-weight: bold;
+
+    grid-column-start: 2;
 }
 
 .popular-cat-icon {
-
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
 
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;  
 
-    height: fit-content;
-    width: fit-content;
+    height: 64px;
+    width: 64px;
 
     clip-path: circle();
+
+    padding-left: 25px;
 }
 
 #popular-cata {
@@ -459,5 +467,5 @@ body {
 }
 
 #popular-catc {
-    background-image: url("icons/totallycat.jpg");
+    background-image: url("icons/totallycat.png");
 }
